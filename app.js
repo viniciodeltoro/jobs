@@ -20,6 +20,9 @@ mongoose.connect('mongodb://localhost/jobs', function (err, res) {
   else console.log('connected to db');
 });
 
+app.use(express.static(__dirname + '/public'));
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
