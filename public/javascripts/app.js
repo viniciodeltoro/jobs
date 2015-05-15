@@ -12,7 +12,7 @@ var app = angular.module('jobsApp', ['ngRoute'])
     controllerAs: 'vm'
   });
   // configure html5 to get links working on jsfiddle
-  $locationProvider.html5Mode(true);
+  //$locationProvider.html5Mode(true);
 });
 
 function MainCtrl () {
