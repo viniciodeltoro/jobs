@@ -1,7 +1,7 @@
-var app = angular.module('jobsApp', ['ngRoute'])
+angular.module('jobsApp', ['ngRoute'])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
-  .when('/', {
+  .when('/login', {
     templateUrl: '/views/login.html',
     controller: 'LoginCtrl',
     controllerAs: 'vm'
@@ -11,9 +11,9 @@ var app = angular.module('jobsApp', ['ngRoute'])
     controller: 'HomeCtrl',
     controllerAs: 'vm'
   });
-  // configure html5 to get links working on jsfiddle
-  //$locationProvider.html5Mode(true);
 });
+
+angular.module('jobsApp').controller('MainCtrl', MainCtrl);
 
 function MainCtrl () {
   var vm = this;
