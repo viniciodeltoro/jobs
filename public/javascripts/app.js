@@ -1,3 +1,4 @@
+/* global angular */
 angular.module('jobsApp', ['ngRoute'])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
