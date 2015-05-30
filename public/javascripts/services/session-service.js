@@ -1,25 +1,24 @@
 'use strict';
 angular.module('jobsApp').factory('sessionService', sessionService);
-sessionService.$inject = ['$http'];
-function sessionService($http) {
+sessionService.$inject = ['$http', 'authTokenFactory'];
+function sessionService($http, authTokenFactory) {
   var someValue = '';
   var service = {
       someValue: someValue,
-      validateCredentials: validateCredentials
+      validateCredentials: validateCredentials,
+      logout: logout
   };
   return service;
 
   function validateCredentials(userName, password) {
-    return $http.get('/sessions')
-        .then(validationComplete)
-        .catch(validationFailed);
-
-    function validationComplete(response) {
-        return response.data.results;
-    }
-
-    function validationFailed(error) {
-        logger.error('XHR Failed for getAvengers.' + error.data);
-    }
+    return $http.post('/sessions', {
+      userName: userName,
+      password: password
+    });
   }
+
+  function logout () {
+    authTokenFactory.setToken();
+  }
+
 }

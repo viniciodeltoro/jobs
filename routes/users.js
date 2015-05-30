@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
 /* POST, creating new user*/
 router.post('/', function(req, res) {
   var userToSave = req.body;
-  userToSave.password = hash(userToSave.password)
+  userToSave.password = hash(userToSave.password);
   var newUser = new user(userToSave);
   newUser.save(function (err, newuser) {
     if(!err) res.send(newuser);
@@ -36,8 +36,8 @@ router.delete('/:id', function(req, res) {
   });
 });
 
-hash = function(password) {
+var hash = function(password) {
   return crypto.createHash('sha1').update(password).digest('base64')
-}
+};
 
 module.exports = router;

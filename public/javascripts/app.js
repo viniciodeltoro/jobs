@@ -1,6 +1,7 @@
 /* global angular */
 angular.module('jobsApp', ['ngRoute'])
-.config(function($routeProvider, $locationProvider) {
+.config(function($routeProvider, $locationProvider, $httpProvider) {
+  $httpProvider.interceptors.push('authInterceptor');
   $routeProvider
   .when('/login', {
     templateUrl: '/views/login.html',
