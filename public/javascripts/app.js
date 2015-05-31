@@ -1,9 +1,9 @@
 /* global angular */
 angular.module('jobsApp', ['ngRoute'])
-.config(function($routeProvider, $locationProvider, $httpProvider) {
+.config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
   $httpProvider.interceptors.push('authInterceptor');
   $routeProvider
-  .when('/login', {
+  .when('/', {
     templateUrl: '/views/login.html',
     controller: 'LoginCtrl',
     controllerAs: 'vm'
@@ -13,7 +13,7 @@ angular.module('jobsApp', ['ngRoute'])
     controller: 'HomeCtrl',
     controllerAs: 'vm'
   });
-});
+}]);
 
 angular.module('jobsApp').controller('MainCtrl', MainCtrl);
 
