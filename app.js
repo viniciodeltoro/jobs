@@ -5,7 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var sassMiddleware = require('node-sass-middleware');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var sessions = require('./routes/sessions');
@@ -20,6 +20,13 @@ mongoose.connect('mongodb://localhost/jobs', function (err, res) {
   if (err) console.log('error: ' + err);
   else console.log('connected to db');
 });
+
+app.use(sassMiddleware({
+  src: __dirname + '/public/',
+  dest: __dirname + '/public/',
+  debug: false,
+  outputStyle: 'expanded'
+}));
 
 app.use(express.static(__dirname + '/public'));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));

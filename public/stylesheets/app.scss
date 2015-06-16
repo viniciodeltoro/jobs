@@ -1,0 +1,65 @@
+@mixin roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  @include roboto;
+}
+
+@mixin roboto-light{
+  @include roboto;
+  font-weight: 300;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius !important;
+     -moz-border-radius: $radius !important;
+      -ms-border-radius: $radius !important;
+          border-radius: $radius !important;
+}
+
+@mixin input-text-format{
+  @include roboto-light;
+  font-size: 1rem !important;
+}
+
+input::-webkit-input-placeholder {
+  @include input-text-format;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  @include input-text-format;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  @include input-text-format;
+}
+
+input:-ms-input-placeholder {  
+  @include input-text-format; 
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="month"], 
+input[type="week"], 
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="time"], 
+input[type="url"], 
+input[type="color"], textarea {
+  border-color: #808080;
+  @include border-radius(3px);
+  @include input-text-format;
+}
+
+button[type="submit"]{
+  background-color: #4BC538;
+  font-size: 1rem;
+  padding: 0.6rem;
+}
