@@ -1,20 +1,35 @@
-<div class="row">
+<div class="row" style="margin-top:1rem; margin-bottom:0.5rem;">
   <div class="large-6 columns"></div>
   <div class="large-6 columns">
     <form ng-submit="vm.login()">
       <div class="row">
         <div class="large-4 columns">
-          <input type="text" placeholder="Username" ng-model="vm.credentials.username">
-          <span class="roboto">Not a member yet?</span>
+          <input type="text" placeholder="Username" ng-model="vm.credentials.username" class="no-margins">
         </div>
         <div class="large-4 columns">
-          <input type="password" placeholder="Password" ng-model="vm.credentials.password">
-          <a href="" class="roboto">Sign up!</a>
+          <input type="password" placeholder="Password" ng-model="vm.credentials.password" class="no-margins">
         </div>
         <div class="large-4 columns">
-          <button class="tiny small radius" type="submit">Log In</button>
+          <button class="tiny small radius no-margins" type="submit">Log In</button>
         </div>
       </div>
     </form>
+  </div>
+</div>
+<div class="row" style="margin-bottom:2rem;">
+  <div class="large-6 columns"></div>
+  <div class="large-6 columns">
+    <div class="large-8 columns">
+      <span class="right gray-light text-size0p8rem">Forgot username or password?</span>
+    </div>
+    <div class="large-4 columns">
+      <a class="text-size0p8rem" style="display:block;">Recover Account</a>
+    </div>
+  </div>
+</div>
+<div class="image-login">
+  <div style="display:table-cell; vertical-align:middle;">
+    <h1 class="roboto-light" style="color:white; font-size:3.5rem;">Let the professionals do<br>the job</h1>
+    <button class="radius no-margins roboto-light" style="font-size:1.5rem; padding:0.6rem; background-color: #3A9C28;">Sign up for free</button>
   </div>
 </div>

@@ -11,6 +11,14 @@ body{
   font-weight: 300;
 }
 
+.roboto-regular {
+  @include roboto;
+  font-weight: 400;
+}
+.roboto-light{
+  @include roboto-light;
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius !important;
      -moz-border-radius: $radius !important;
@@ -62,4 +70,23 @@ button[type="submit"]{
   background-color: #4BC538;
   font-size: 1rem;
   padding: 0.6rem;
+}
+
+.no-margins{
+  margin: 0rem !important;
+}
+a{color: #2692FF !important;}
+
+.text-size0p8rem{
+  font-size:0.8rem;
+}
+
+.gray-light{color: #808080;}
+
+.image-login{
+  height:620px;
+  background-image: url("/images/login/login-carpenter.png");
+  text-align: center;
+  display: table;
+  width: 100%;
 }
