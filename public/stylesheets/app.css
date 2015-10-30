@@ -2,6 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* App official font*/
 .roboto-regular {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -12,6 +13,13 @@ body {
   font-weight: 300;
 }
 
+.roboto-thin {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+/* App official font*/
+/* General forms*/
 input::-webkit-input-placeholder {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -68,6 +76,7 @@ button[type="submit"] {
   padding: 0.6rem;
 }
 
+/* General forms*/
 .no-margins {
   margin: 0rem !important;
 }
@@ -76,14 +85,60 @@ a {
   color: #2692FF !important;
 }
 
-.text-size0p8rem {
+/* Text settings */
+.text0p8rem {
   font-size: 0.8rem;
+}
+
+.text3p5rem {
+  font-size: 3.5rem;
+}
+
+.text1p5rem {
+  font-size: 1.5rem;
+}
+
+.text1p6rem {
+  font-size: 1.6rem;
+}
+
+.text1p7rem {
+  font-size: 1.7rem;
+}
+
+.text1p2rem {
+  font-size: 1.2rem;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.fa-6x {
+  font-size: 6em;
 }
 
 .gray-light {
   color: #808080;
 }
 
+.gray-dark {
+  color: #464646;
+}
+
+.blue-ocean {
+  color: #2D678E;
+}
+
+.green {
+  color: #62A14D;
+}
+
+.white {
+  color: white;
+}
+
+/* Text settings */
 .image-login {
   height: 620px;
   background-image: url("/images/login/login-carpenter.png");
